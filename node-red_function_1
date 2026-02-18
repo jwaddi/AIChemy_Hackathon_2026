@@ -1,0 +1,16 @@
+// Safely check if the expected data exists before trying to read it
+if (msg.payload && msg.payload.metrics) {
+    var analogue = { 
+        payload: msg.payload.metrics.analogue_approx, 
+        topic: "Analogue Sensor" 
+    };
+    var digital = { 
+        payload: msg.payload.metrics.digital_ref, 
+        topic: "Digital Reference" 
+    };
+    return [analogue, digital];
+} else {
+    // If the data is missing, send a warning to the debug tab instead of crashing
+    node.warn("Received message without expected metrics structure");
+    return null;
+}
