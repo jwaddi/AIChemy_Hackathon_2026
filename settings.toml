@@ -1,0 +1,12 @@
+INATORNAME = "MIF_Station_Alpha"
+INATORTOPIC = "hackathon/mif/station_alpha"
+ACQUIRETIME = 2
+RECONTIME = 5
+WIFI_SSID = "Josh"
+WIFI_PASSWORD = "joshwaddwifi"
+IP_ADDRESS = ""
+PORT = 1883
+URL = ""
+MQTT_USERNAME = ""
+MQTT_KEY = ""
+BROKER = "test.mosquitto.org"
